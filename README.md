@@ -9,7 +9,7 @@ A single regular expression that successfully meets requirements below:
 - validate that the string does not contain any whitespace characters (spaces, tabs, or newlines);
 
 ## Running locally
-To run the application locally switch to the UC1 folder where UC1.sln is located and run the command from the console:
+To run the application locally switch to the UC10 folder where UC10.sln is located and run the command from the console:
 ```
 dotnet run
 ```

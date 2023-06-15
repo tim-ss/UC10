@@ -1,0 +1,19 @@
+Write a regular expression for validation of a string value that meets such criteria: 1. Validate the maximum string length (passed as parameter). 2. Validate that the string contains at least one uppercase letter, one lowercase letter, one digit, and one special character from a predefined list: !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~.  3. Validate that the string does not contain any whitespace characters (spaces, tabs, or newlines). 
+ChatGPT
+Sure! Here's a regular expression that satisfies the given criteria:
+
+regex
+Copy code
+^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~])\S{1,%s}$
+In this regular expression, %s should be replaced with the maximum string length value provided as a parameter.
+
+Explanation:
+
+^ asserts the start of the string.
+(?=.*[A-Z]) asserts that there is at least one uppercase letter.
+(?=.*[a-z]) asserts that there is at least one lowercase letter.
+(?=.*\d) asserts that there is at least one digit.
+(?=.*[!"#$%&'()*+,-./:;<=>?@[\]^_{|}~])` asserts that there is at least one special character from the predefined list.
+\S{1,%s} matches between 1 and %s (maximum length) non-whitespace characters.
+$ asserts the end of the string.
+Please note that the expression assumes the use of a language that supports lookaheads in regular expressions. Additionally, when using this regular expression, remember to replace %s with the appropriate maximum string length value.
